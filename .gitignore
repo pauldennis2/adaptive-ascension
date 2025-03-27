@@ -20,3 +20,15 @@ Thumbs.db
 venv/
 env/
 */env/
+
+# Java-specific files and directories
+*.class
+*.jar
+*.war
+*.ear
+/bin/
+/target/
+/build/
+.classpath
+.project
+.settings/
