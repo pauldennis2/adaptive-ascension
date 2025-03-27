@@ -1,0 +1,22 @@
+# PyCharm files
+.idea/
+*.iml
+
+# VS Code files
+.vscode/
+
+# Data directory
+data/
+
+# Python bytecode
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Virtual environment (if you use one)
+venv/
+env/
+*/env/
