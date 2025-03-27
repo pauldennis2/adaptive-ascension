@@ -32,3 +32,4 @@ env/
 .classpath
 .project
 .settings/
+/.idea/
