@@ -2,8 +2,8 @@ import math
 
 class Monster:
     REGEN_ABILITY = lambda combat_state, monster: setattr(monster, "hp", monster.hp + 3)
-    EXTRA_DAMAGE_ABILITY = lambda combat_state, monster: setattr(combat_state, "hero_hp", combat_state["hero_hp"] - 2)
-
+    EXTRA_DAMAGE_ABILITY = lambda combat_state, monster: combat_state["hero"].take_damage(2)
+    
     def __init__(self, floor: int):
         """
         Initializes a Monster instance.

@@ -6,25 +6,14 @@ from monster import Monster
 # Assuming Card, Hero, and Monster classes are defined in their respective files
 
 def perform_combat(hero: Hero, monster: Monster, log_combat: bool = False) -> bool:
-    """
-    Simulates a combat encounter between a hero and a monster, with optional logging.
-
-    Args:
-        hero: The Hero instance.
-        monster: The Monster instance.
-        log_combat: If True, logs combat events.
-
-    Returns:
-        True if the hero wins, False otherwise.
-    """
+    """Simulates a combat encounter."""
     hero_block = 0
-    combat_state = {"hero_hp": hero.hp}
+    combat_state = {"hero": hero} # combat state now holds the hero object.
 
     if log_combat:
-        logging.basicConfig(level=logging.INFO)  # Configure logging
+        logging.basicConfig(level=logging.INFO)
 
     while not hero.is_dead() and not monster.is_dead():
-        # Hero's turn
         hero_block = 0
         played_cards = hero.deck[:2]
         hero.deck = hero.deck[2:] + played_cards
@@ -41,22 +30,18 @@ def perform_combat(hero: Hero, monster: Monster, log_combat: bool = False) -> bo
             logging.info(f"Monster HP: {monster.hp}, Hero Block: {hero_block}, Hero HP: {hero.hp}")
 
         if monster.is_dead():
-            if log_combat:
-                logging.info("Hero wins!")
-            return True  # Hero wins
+            return True
 
-        # Monster's turn
         monster.apply_abilities(combat_state)
         attack_damage = max(0, monster.damage - hero_block)
         hero.take_damage(attack_damage)
-        combat_state["hero_hp"] = hero.hp
 
         if log_combat:
             logging.info(f"Monster attacks for: {attack_damage}, Hero HP: {hero.hp}")
 
     if log_combat:
         logging.info("Monster wins!")
-    return False  # Monster wins
+    return False
 
 def main():
     num_heroes = 10
