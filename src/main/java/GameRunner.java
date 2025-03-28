@@ -5,7 +5,7 @@ public class GameRunner {
 
     public static void main(String[] args) {
         System.out.println("Hello");
-        Hero me = new Hero(50);
+        Hero me = new Hero(HeroClass.TANK);
         me.takeDamage(10);
         System.out.println(me);
 

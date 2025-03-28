@@ -6,8 +6,8 @@ class HeroTest {
 
     @Test
     void takeDamage() {
-        Hero hero = new Hero(100);
+        Hero hero = new Hero(HeroClass.TANK);
         hero.takeDamage(20);
-        assertEquals(80, hero.getHp());
+        assertEquals(55, hero.getHp());
     }
 }
