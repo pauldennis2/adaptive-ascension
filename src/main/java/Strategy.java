@@ -27,5 +27,7 @@ public class Strategy {
         return options;
     }
 
+    private List<HeroAction> preferenceOrder;
+
     private Hero hero;
 }

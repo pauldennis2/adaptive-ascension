@@ -1,0 +1,16 @@
+Last time there was too much randomness. Basically my expectation was, I'll create a game with a non-obvious solution, and the genetic algorithm will figure it out. This time I want to do the opposite. I want to create a game where the solution may be somewhat obvious and the challenge is to get the algo to find it. Some ideas:
+
+Starting at level 10, the player is offered a "Fire Immunity" passive power. Starting at level 15, and every X levels thereafter, the player will take 5-10 fire damage per turn.
+-> Obvious solution: take the passive at level 14 (before this it has no value, after this it's almost required)
+
+Starting at some level, monsters will start doing a multi-attack where they hit 10 times for 2 damage. At some point the player is offered a damage reduction passive which makes this survivable.
+
+At level 20, the player encounters the first boss, which has wayyy more health. Sometime before this, they're offered some kind of Demon Form/Noxious Fumes type passive or card that will allow them to scale in longer combats.
+
+Trap floors - introduce floors where the player has a few "choices" to evade massive damage (50) from a trap. If they have 5+ dex, they can dodge. 5+ str, keep the thing from falling or whatever. Otherwise maybe they can sacrifice their best card?
+
+Daze type challenge - the player starts receiving junk cards in their deck. If they haven't taken some kind of Dark Embrace/Feel no pain type effect, this overwhelms them.
+
+===
+
+Again, the idea isn't to make a game that would be "fun" for a real player. Keep it relatively deterministic. Passive abilities that are always offered at certain floors are great for this.
